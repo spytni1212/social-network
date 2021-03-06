@@ -1,0 +1,43 @@
+.usersContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.userDescription {
+    height: 80px;
+    display: flex;
+    column-gap: 500px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.userPhotoAndButton {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userPhoto {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.paginationUsers {
+    display: flex;
+}
+
+.paginationButton {
+    cursor: pointer;
+}
+
+.selectedPage {
+    font-weight: bold;
+}

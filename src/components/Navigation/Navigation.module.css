@@ -1,0 +1,17 @@
+.navigation {
+    grid-area: n;
+    background-color: rgb(236, 201, 42);
+}
+
+.item {
+    margin-left: 10px;
+    color: white;
+}
+
+.item a {
+    text-decoration: none;
+}
+
+.activeLink {
+    color: blue;
+}
