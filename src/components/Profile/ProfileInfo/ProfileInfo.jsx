@@ -3,11 +3,11 @@ import s from "./ProfileInfo.module.css";
 import Preloader from '../../common/preloader/Preloader'
 
 const ProfileInfo = (props) => {
-
   if (!props.profile) {
     return <Preloader />
   }
   return (
+  
     <div>
       <div>
         <img className={s.img} src="https://www.mirf.ru/wp-content/uploads/2020/10/Jujutsu-Kaisen-2.jpg" alt='/ '></img>

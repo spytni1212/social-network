@@ -1,4 +1,4 @@
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore, compose } from 'redux';
 import profileReducer from './profile-reducer';
 import messagesReducer from './messages-reducer';
 import sidebarReducer from './sidebar-reducer';
@@ -13,7 +13,9 @@ let reducers = combineReducers({
     auth: authReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, compose(
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+));
 
 window.store = store;
 
