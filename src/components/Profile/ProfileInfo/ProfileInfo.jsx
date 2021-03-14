@@ -8,14 +8,14 @@ const ProfileInfo = (props) => {
     return <Preloader />
   }
   return (
-  
+    
     <div>
       {/* <div>
         <img className={s.img} src="https://www.mirf.ru/wp-content/uploads/2020/10/Jujutsu-Kaisen-2.jpg" alt='/ '></img>
       </div> */}
       <div className={s.descriptionBlock}>
         <img src={props.profile.photos.large} alt='/' />
-        <ProfileStatus status={'hi how are you'}/>
+        <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
       </div>
     </div>
   );
