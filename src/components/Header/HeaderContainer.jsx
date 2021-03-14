@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Header from './Header';
 import * as axios from 'axios';
-import { setAuthUserData } from '../../redux/auth-reducer';
+import { setUserData } from '../../redux/auth-reducer';
 
 class HeaderContainer extends React.Component {
 
@@ -13,7 +13,7 @@ class HeaderContainer extends React.Component {
         .then(response => {
             if (response.data.resultCode === 0) {
                 let {id, email, login } = response.data.data
-                this.props.setAuthUserData(id, email, login);
+                this.props.setUserData(id, email, login);
             }
         }) 
     }
@@ -32,4 +32,4 @@ let mapStateToProps = (state) => (
     }
 )
 
-export default connect(mapStateToProps, {setAuthUserData})(HeaderContainer);
+export default connect(mapStateToProps, {setUserData})(HeaderContainer);
